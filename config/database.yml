@@ -1,0 +1,24 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: hieund  
+  password: "1"
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: demo_development
+
+test:
+  <<: *default
+  database: demo_test
+
+production:
+  # <<: *default
+  adapter: mysql2
+  database: demo_mysql
+  username: hieund
+  password: "1"
+  encoding: utf8
+  port: 3306
