@@ -5,16 +5,16 @@ set :application, "Demo_Deploy"
 set :repo_url, "git@github.com:dinhhieu165/demo.git"
 
 set :branch, :master
-set :deploy_to, '/home/ubuntu/demo'
+set :deploy_to, '/home/deploy/demo'
 set :pty, true
-set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_files, %w{config/database.yml config/application.yml config/secrets.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user
 set :rvm_ruby_version, '2.5.1'
 set :ssh_options, { forward_agent: true } # Edit this if you are using MRI Ruby
-set :tmp_dir, "/home/ubuntu/demo/tmp"
-set :rvm_map_bins, %w{gem rake ruby rails bundle}
+set :tmp_dir, "/home/deploy/demo/tmp"
+set :rvm_map_bins, %w{gem rake ruby rails bundle puma pumactl}
 set :passenger_restart_with_touch, true
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }

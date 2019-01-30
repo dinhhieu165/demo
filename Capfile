@@ -42,3 +42,5 @@ require 'capistrano/rails/assets' # for asset handling add
 require 'capistrano/rails/migrations' # for running migrations
 require 'capistrano/puma'
 require 'capistrano/passenger'
+set :rvm_type, :user
+set :rvm_ruby_version, '2.5.1'

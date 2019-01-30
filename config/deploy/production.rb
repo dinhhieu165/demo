@@ -61,5 +61,5 @@
 #     # password: "please use keys"
 #   }
 set :stage, :production
-server '52.77.50.96', user: 'ubuntu', roles: %w{web app db}
+server '13.250.20.15', user: 'deploy', roles: %w{web app db}
 

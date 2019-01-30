@@ -242,11 +242,11 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
-  capistrano
+  capistrano (~> 3.7, >= 3.7.1)
   capistrano-bundler
   capistrano-db-tasks (= 0.5)
   capistrano-passenger (~> 0.2.0)
-  capistrano-rails
+  capistrano-rails (~> 1.2)
   capistrano-rvm
   capistrano-ssh-doctor!
   capistrano-yarn
